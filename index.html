@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <v-app id="inspire">
+        <v-container fluid grid-list-xl>
+            <v-layout wrap align-center>
+                <v-flex xs12 sm6 d-flex>
+                    <v-select
+                            :items="items"
+                            v-model="selectedArray"
+                            label="Водительские категории"
+                            @change="updateDriveCatString"
+                            multiple
+                    ></v-select>
+                </v-flex>
+                <v-flex xs12 sm6>
+                    <p>От бэка водительские категории приходят в переменной 'driverCat' в формате - '12211', где 2 означает наличие категории, 1 ее отсутствие.</p><p>Задача - отработать получение, отображение в списке (в данном случае должно отображаться 'B, C'), возможность изменения и сохранение в том же формате.</p>
+                </v-flex>
+            </v-layout>
+        </v-container>
+    </v-app>`
+</div>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@1.5.1/dist/vuetify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@1.5.1/dist/vuetify.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
